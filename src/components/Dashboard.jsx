@@ -1,4 +1,4 @@
-﻿import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { api } from '../services/api';
 
 export default function Dashboard() {
@@ -17,7 +17,7 @@ export default function Dashboard() {
 
   useEffect(() => {
     api.checkHealth()
-      .then(data => setHealthStatus(data.status === 'Live' ? 'Connected (Vercel Live)' : 'Offline'))
+      .then(data => setHealthStatus(data.status === 'Live' ? 'Connected (Render Live)' : 'Offline'))
       .catch(() => setHealthStatus('Offline'));
 
     api.get('/api/orders')
