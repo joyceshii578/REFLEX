@@ -1,4 +1,4 @@
-﻿const RAW_BASE = import.meta.env.VITE_API_URL || "https://project-reflexx.vercel.app";
+const RAW_BASE = import.meta.env.VITE_API_URL || "https://project-reflexx-backend.onrender.com";
 const API_BASE = RAW_BASE.replace(/\/$/, "");
 
 async function request(path, options = {}) {
